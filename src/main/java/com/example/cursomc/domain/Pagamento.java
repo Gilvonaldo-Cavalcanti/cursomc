@@ -14,7 +14,7 @@ import com.example.cursomc.domain.enums.EstadoPagamento;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Pagamento implements Serializable {
+public abstract class Pagamento implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	@Id
