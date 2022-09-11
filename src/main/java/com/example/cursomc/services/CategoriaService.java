@@ -1,9 +1,12 @@
 package com.example.cursomc.services;
 
+import java.util.List;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+
 import com.example.cursomc.domain.Categoria;
 import com.example.cursomc.repositories.CategoriaRepository;
 import com.example.cursomc.services.exceptions.DataIntegrityException;
@@ -39,6 +42,10 @@ public class CategoriaService {
 			throw new DataIntegrityException("Esta categoria contém produtos associados a ela");
 		}
 		
+	}
+	
+	public List<Categoria> findAll(){
+		return repo.findAll();
 	}
 	
 }
